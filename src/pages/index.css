@@ -1,0 +1,15 @@
+/* Импорт для нормализации блоков */
+@import url('../vendor/normalize.css');
+/* Импорт шрифтов */
+@import url(../fonts/fonts.css);
+/* Импорт остальных стилей */
+@import url(../blocks/page/page.css);
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/nav/__link/nav__link.css);
+@import url(../blocks/nav/__link/nav__link.css);
+
+
+
+body {
+    background-color: rgb(172, 235, 225);
+}
