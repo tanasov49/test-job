@@ -1,0 +1,8 @@
+.main__title {
+    margin: 100px auto 0;
+    font-size: 26px;
+    line-height: 26px;
+    max-width: 550px;
+    text-align: center;
+    color: #000000;
+}

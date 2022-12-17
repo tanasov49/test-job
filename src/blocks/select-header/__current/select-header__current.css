@@ -1,0 +1,14 @@
+.select-header__current {
+    position: relative;
+    border: 1px solid black;
+    margin: 0;
+}
+.select-header__current::after {
+    position: absolute;
+    content: '>';
+    font-size: 20px;
+    color: #000000;
+    transition: ease 0.7s;
+    transform: rotate(90deg);
+    right: 5px;
+}

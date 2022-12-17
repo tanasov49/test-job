@@ -1,0 +1,8 @@
+.select-body__item {
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+.select-body__item:hover {
+    background-color: rgb(169, 167, 167);
+    color: rgba(177, 234, 112, 0.897);
+}
