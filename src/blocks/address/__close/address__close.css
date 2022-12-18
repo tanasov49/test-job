@@ -1,0 +1,11 @@
+.address__close {
+    background: transparent;
+    background-image: url(../../../images/btn_close.svg);
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: -30px;
+    left: 250px;
+}

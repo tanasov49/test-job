@@ -1,0 +1,5 @@
+.popup_opened {
+    z-index: 3;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}

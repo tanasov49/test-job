@@ -2,8 +2,9 @@
 const valuesUl = document.querySelector('.select-body');
 const selectHeader = document.querySelector('.select-header');
 const selectBody = document.querySelector('.select-body');
-const selectCurrentHeader = document.querySelector('.select-header__current')
-const selectItem = document.querySelectorAll('.select-body__item')
+const select = document.querySelector('.select');
+const selectCurrentHeader = document.querySelector('.select-header__current');
+const selectItem = document.querySelectorAll('.select-body__item');
 // Значения для массива select
 const values = [
     {id: '1', value: 'Vue'},
@@ -25,7 +26,6 @@ const openSelectBody = (selectBody) => {
 const closeSelectBody = (selectBody) => {
     selectBody.classList.remove('select-body_active');
     selectCurrentHeader.classList.remove('select-header__current_active');
-
 }
 // Переменная для изменения состояния открытия selectBody
 let isSelectBodyShow = true;
@@ -36,6 +36,13 @@ selectHeader.addEventListener('click', ()=> {
         openSelectBody(selectBody);
         isSelectBodyShow = false;
     } else {
+        closeSelectBody(selectBody);
+        isSelectBodyShow = true;
+    }
+})
+// Закрытие окна после покидания мышью select
+select.addEventListener('mouseleave', () => {
+    if (isSelectBodyShow === false) {
         closeSelectBody(selectBody);
         isSelectBodyShow = true;
     }
