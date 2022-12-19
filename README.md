@@ -1,7 +1,7 @@
 # Тестовое задание для компании Консалт Инфо
-Ссылка на задание [ссылка на мекет](https://docs.google.com/document/d/1pMC1tJPOn7YJeTj9DAGxj-Q7y-NHKvYGkQl5BkUl90E/edit)
+Ссылка на задание [ссылка на задание](https://docs.google.com/document/d/1pMC1tJPOn7YJeTj9DAGxj-Q7y-NHKvYGkQl5BkUl90E/edit)
 
-[Ссылка на демо страницу](https://tanasov49.github.io/healthy_food/)
+[Ссылка на демо страницу](https://tanasov49.github.io/test-job/)
 
 В данном проекте я использовал локальный импорт изображений, но можно использовать импорт при помощи Rest Api.
 Данный проект создан при помощи React.
