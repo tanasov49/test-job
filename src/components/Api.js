@@ -1,3 +1,4 @@
+// Логика получения данных через api
 export class Api {
     constructor(options) {
       this.address = options.urlJson;

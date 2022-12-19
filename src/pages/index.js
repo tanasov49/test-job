@@ -1,3 +1,4 @@
+// Импорт стилей
 import './index.css';
 const valuesUl = document.querySelector('.select-body');
 const selectHeader = document.querySelector('.select-header');

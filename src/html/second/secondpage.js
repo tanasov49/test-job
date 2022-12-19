@@ -7,6 +7,7 @@ const closeBtnAddress = document.querySelector('.address__close');
 const addressChose = document.querySelector('.address-chose');
 const addressChoseTitle = document.querySelector('.address-chose__title');
 const addressChoseSubtitle = document.querySelector('.address-chose__subtitle');
+// Массив данных 
 const valuesAddress = [
     {id: 1, city: 'Калининград', street: 'Камская 2б'},
     {id: 2, city: 'Светлый', street: 'Мира 6'},
@@ -16,7 +17,7 @@ const valuesAddress = [
     {id: 6, city: 'Калининград', street: 'Транспортная 6'},
     {id: 7, city: 'Калининград', street: 'Судостроительная 10'}
 ]
-
+// Перебо массива данных
 valuesAddress.forEach(function (value) {
     const listClient = template.content.querySelector('.client').cloneNode(true);
     const cityTitle = document.createElement('p');
@@ -35,29 +36,36 @@ valuesAddress.forEach(function (value) {
         closeAddress(popup);
     })
 })
+//Функция Закрытие модального окна вне области
 const closeOverlayPopup = (evt) => {
     if (evt.target.classList.contains('popup_opened')) {
       closeAddress(evt.target);
     }
   }
+//Функция Закрытие по клавише Esc
   const closeKeyEsc = (evt) => {
     if (evt.key === 'Escape') {
       closeAddress(popup);
     }
   }
+// Функция Открытие popup
   const openAddress = (popup) => {
     popup.classList.add("popup_opened");
     document.addEventListener('keyup', closeKeyEsc);
     document.addEventListener('click', closeOverlayPopup);
   }
+//Функция Закрытие popup  
   const closeAddress = (popup) => {
     popup.classList.remove("popup_opened");
     document.removeEventListener('keyup', closeKeyEsc);
     document.removeEventListener('click', closeOverlayPopup);
   }
+
+// Открытие окна popup
   btnAddress.addEventListener('click', () => {
     openAddress(popup);
   });
+// Закрытие по крестику
   closeBtnAddress.addEventListener('click', () => {
     closeAddress(popup);
   })

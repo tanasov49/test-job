@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve",
-    "predeploy": "npm run build"
+    "dev": "concurrently \"npm run server\" \"webpack serve\"",
+    "predeploy": "npm run build",
+    "server": "json-server --watch src/users/users.json 3000"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.2"
+    "bootstrap-icons": "^1.10.2",
+    "concurrently": "^7.6.0"
   }
 }

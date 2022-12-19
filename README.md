@@ -1,5 +1,5 @@
 # Тестовое задание для компании Консалт Инфо
-Макет Figma (Спасибо автору Max) [ссылка на мекет](https://www.figma.com/file/DmIkAGpRNjIg7EqJRXQV4I/Healthy-food-%2B?node-id=2%3A2&t=24lMoADN3oovhyuU-0)
+Ссылка на задание [ссылка на мекет](https://docs.google.com/document/d/1pMC1tJPOn7YJeTj9DAGxj-Q7y-NHKvYGkQl5BkUl90E/edit)
 
 [Ссылка на демо страницу](https://tanasov49.github.io/healthy_food/)
 
@@ -11,95 +11,92 @@
 
 -NodeJs;
 
--React;
-
--Хуки реакта;
-
--grid
+-Bootstrap 5
 
 -flex;
 
--SASS
-
 -БЭМ, именование блоков согласно методологии;
 
--Адаптивная и мобильная верстка под все разрешения (от 320px до 1440px);
 
 Использовал только доуступные в React хуки, т.к. старался сделать проект с минимальным участием сторонних библиотек. 
-### Для развертывания проекта с помощью webpack использовал следующие модули:
-#### Установка самого webpack
+### Установлены следующие плагины для Webpack
+#### 
 ```shell
 npm i webpack --save-dev
-```
-#### Установка плагина интерфейса
-```shell
 npm i webpack-cli --save-dev
-```
-#### Установка плагина локального сервера
-```shell
 npm i webpack-dev-server --save-dev
-```
-#### Установка плагина для Babel
-```shell
 npm i @babel/core --save-dev
 npm i @babel/preset-env --save-dev
 npm i core-js
 npm i babel-loader --save-dev
-```
-#### Установка плагина html
-```shell
 npm i html-webpack-plugin --save-dev 
-```
-#### Установка плагина CleanWebpackPlugin
-```shell
 npm i clean-webpack-plugin --save-dev 
-```
-#### Установка плагинов для обрабоки CSS
-```shell
 npm i css-loader --save-dev
 npm i mini-css-extract-plugin --save-dev 
 npm i postcss-loader --save-dev
 npm i autoprefixer --save-dev
-npm i cssnano --save-dev 
-```
-#### Установка плагина для SASS
-```shell
-npm i sass-loader
-```
-#### Установка плагина для обработки SVG файлов (нужно для для того чтобы их удобно помещать в виде блоков React)
-```shell
-npm install --save-dev @svgr/webpack
+npm i cssnano --save-dev
+npm i concurrently
+npm i json-server 
 ```
 #### Для запуска проекта используем
 ```shell
-npm start
+npm run dev
+```
+#### Для запуска сборки проекта используем
+```shell
+npm run build
 ```
 #### Конфигурация package.json для запуска проекта и его build
 ```javascript
   "scripts": {
-    "start": "webpack serve",
     "build": "webpack --mode production",
+    "dev": "webpack serve",
     "predeploy": "npm run build"
   },
 ```
-Всю остальную информацию по настройке самого webpack и данных плагинов вы найдете в файле   [webpack.config.js](https://github.com/tanasov49/healthy_food/blob/main/webpack.config.js), [.babelrc](https://github.com/tanasov49/healthy_food/blob/main/.babelrc) и [postcss.config.js](https://github.com/tanasov49/healthy_food/blob/main/postcss.config.js)
-### Компоненты React
-Все блоки React разбиты на отдельные компоненты в папке [components](https://github.com/tanasov49/healthy_food/tree/main/src/components), в которой есть главные блоки Header, Main, Footer. А уже в самой папке [blocks](https://github.com/tanasov49/healthy_food/tree/main/src/components/blocks) находятся все основные блоки Main. Отдельно в самой папке [ui](https://github.com/tanasov49/healthy_food/tree/main/src/components/ui) находятся различные блоки, которые можно использовать повторно на каждой странице, либо в новом проекте, т.к. я старался использовать данный подход, как сам метод БЭМ.
-### Шрифты
-[Шрифты](https://github.com/tanasov49/healthy_food/tree/main/src/fonts) в данном проекте я использовал WorkSans [ссылка](https://fonts.google.com/specimen/Work+Sans), т.к. представленный шрифт в макете не имеется для распросранения в свободном доступе. Поэтому был подобран весьма близкий к данному шрифту.
-### Стили
-Весь проект построен с помощью методологии БЭМ, т.е. каждый отдельный взятый блок можно использовать повторно на любой странице проекта, либо в другом проете. Все шрифты в корневой папке src [blocks](https://github.com/tanasov49/healthy_food/tree/main/src/blocks). Все стили импортированы в файле [index.scss](https://github.com/tanasov49/healthy_food/blob/main/src/pages/index.scss)
-### Изображения
-Все изображения находятся в папке [images](https://github.com/tanasov49/healthy_food/tree/main/src/images). Подключение в проекте я использовал следующим образом:
+
+### Первое задание
+#### Создать плагин кастомного всплывающего списка “select” на чистом JavaScript.
+
+Конструктор плагина должен принимать селектор тега на странице, в котором будет сгенерирован список и вторым аргументом объект с параметрами — массив списка, callback и так далее.
+
+Плагин должен иметь callback-функцию в которую передаётся объект выбранного списка со значением value и текстом элемента.
+
+Экземпляр объекта должен иметь методы открытия, закрытия селекта и метод выбора определенного пункта, при вызове которого также должна срабатывать callback-функция
+
+Создание массива данных
 ```javascript
-// Для импорта в качестве подключения к img
-import ImageFood1 from '../../../images/images_food/imagefood1.jpg';
-// Для ипорта SVG в качестве блока использовал также
-import ButtonLeft from '../../../images/svg/button-left.svg';
-// Для иморта svg в качестве src использовал
-import ButtonLeft from '../../../images/svg/button-left.svg?url';
+const values = [
+    // сюда добавляем массив данных
+]
 ```
-### Использование SASS
-Для использования миксинов и переменных, чтобы можно было в случае чего менять быстро значения стилей я использовал их, все они находятся в папке [sass](https://github.com/tanasov49/healthy_food/tree/main/src/sass)
-## Задача проекта
-Тренировка самого себя и добавление в потрфолио
+### Второе задание
+#### Плагин модального окна
+Создать плагин модального окна на чистом JavaScript.
+
+Плагин принимает селектор содержимого, которое будет вставлено в overlay, overlay должен генерироваться и вставляться в body автоматически, разработчик при использовании плагина должен только передать селектор и параметры.
+
+Окно должно закрываться по клику на крестик и любую область экрана вне модального окна.
+### Второе задание
+#### Список пользователей из json
+Сверстать простую страницу, с применением стилей bootstrap, и вывести список пользователей в виде таблицы с полями: ID, Имя, Фамилия, E-mail, Avatar.
+
+В данном я проекте использую fake-server для получения данных из json файла локально при помощи fetch.
+Файл с данными хранится в папке src/users
+
+Данный метод работает только локально. 
+Поэтому если скачать проект на компьютер и запустить командой
+```shell
+npm run build
+```
+Запустится сам проект и сервер с данными из файла json.
+
+Для этого я добавил строчку в paskage.json
+```shell
+    "dev": "concurrently \"npm run server\" \"webpack serve\"",
+    "server": "json-server --watch src/users/users.json 3000"
+```
+
+В данном задании я добавлял стили через bootstrap 5. 
+Вся логика добавления карточек я сделал через классы js, которые расположены в папке src/components. Это дает возможность использовать повторно данные компоненты на других страницах. В данном случае я использовал ООП в JS

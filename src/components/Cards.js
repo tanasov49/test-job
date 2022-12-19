@@ -1,3 +1,4 @@
+// Получаем и вставляем данные в карточку
 export class Cards {
     constructor(data, cardSelector) {
       this._firstName = data.first_name;

@@ -1,3 +1,4 @@
+// Производим рендер 
 export class SectionCards {
     constructor({renderer}, containerSelector) {
         this._renderer = renderer;

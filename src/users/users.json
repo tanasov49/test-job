@@ -1,4 +1,6 @@
-[{"id":1,"first_name":"Giraldo","last_name":"Brumfitt","email":"gbrumfitt0@ustream.tv","avatar":"https://robohash.org/perspiciatisrecusandaeunde.bmp?size=50x50&set=set1"},
+{
+    "users":
+    [{"id":1,"first_name":"Giraldo","last_name":"Brumfitt","email":"gbrumfitt0@ustream.tv","avatar":"https://robohash.org/perspiciatisrecusandaeunde.bmp?size=50x50&set=set1"},
 {"id":2,"first_name":"Courtney","last_name":"Lyfe","email":"clyfe1@state.tx.us","avatar":"https://robohash.org/evenietessemagni.png?size=50x50&set=set1"},
 {"id":3,"first_name":"Terra","last_name":"Lowater","email":"tlowater2@bluehost.com","avatar":"https://robohash.org/voluptatemquamquibusdam.bmp?size=50x50&set=set1"},
 {"id":4,"first_name":"Jacintha","last_name":"Ferrone","email":"jferrone3@washington.edu","avatar":"https://robohash.org/fugitdictaquis.bmp?size=50x50&set=set1"},
@@ -98,3 +100,4 @@
 {"id":98,"first_name":"Sylvester","last_name":"Shurmer","email":"sshurmer2p@google.pl","avatar":"https://robohash.org/nihiletmodi.bmp?size=50x50&set=set1"},
 {"id":99,"first_name":"Dew","last_name":"Sergent","email":"dsergent2q@scientificamerican.com","avatar":"https://robohash.org/inciduntrepellatsequi.bmp?size=50x50&set=set1"},
 {"id":100,"first_name":"Courtnay","last_name":"Thwaites","email":"cthwaites2r@thetimes.co.uk","avatar":"https://robohash.org/expeditaomnisqui.png?size=50x50&set=set1"}]
+}
