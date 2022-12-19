@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(172, 235, 225) !important;  
+}
+.cards_custom {
+    margin: 50px 0 0 0;
+}
+.footer {
+    margin: 20px 0 0 0;
+    padding: 50px 0;
+    border-top: 1px solid black;
+}
+.bi_custom {
+    font-size: 40px;
+}

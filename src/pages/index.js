@@ -1,4 +1,4 @@
-// import './index.css';
+import './index.css';
 const valuesUl = document.querySelector('.select-body');
 const selectHeader = document.querySelector('.select-header');
 const selectBody = document.querySelector('.select-body');

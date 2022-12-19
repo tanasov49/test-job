@@ -1,3 +1,4 @@
+import '../../pages/index.css';
 const popup = document.querySelector('.popup');
 const clients = document.querySelector('.clients');
 const template = document.querySelector('.template-clients');

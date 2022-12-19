@@ -4,19 +4,33 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 
 module.exports = {
-  entry: { main: './src/pages/index.js' },
+  target: 'web',
+  entry: { 
+    index: {
+      import: './src/pages/index.js',
+      
+    },
+    secondpage: {
+      import: './src/html/second/secondpage.js',
+    },
+    thirdpage: {
+      import: './src/html/third/thirdpage.js'
+    }
+  },
   output: {
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-        publicPath: ''
   },
     mode: 'development',
   devServer: {
     static: path.resolve(__dirname, './dist'),
     compress: true,
     port: 8080,
-    open: true
+    open: true,
+    hot: true
+    
   },
+  
   module: {
     rules: [
       {
@@ -36,11 +50,27 @@ module.exports = {
         },
         'postcss-loader']
       },
+      {
+        test: /\.geojson$/,
+        type: 'json',
+      },
+      
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'secondpage.html',
+      template: './src/html/second/secondpage.html',
+      chunks: ['secondpage']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'thirdpage.html',
+      template: './src/html/third/thirdpage.html',
+      chunks: ['thirdpage']
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin()

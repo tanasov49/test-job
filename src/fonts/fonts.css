@@ -9,7 +9,7 @@
     font-family: "Inter";
     font-weight: 500;
     font-style: normal;
-    src: url(./Inter-Medium.woff2) format("woff2"), url(.Inter-Medium.woff) format("woff"), url(./Inter-Medium.eot) format("eot"), url(./Inter-Medium.ttf) format("ttf");
+    src: url(./Inter-Medium.woff2) format("woff2"), url(./Inter-Medium.woff) format("woff"), url(./Inter-Medium.eot) format("eot"), url(./Inter-Medium.ttf) format("ttf");
     font-display: swap;
 }
 
