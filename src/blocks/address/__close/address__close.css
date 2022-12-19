@@ -5,7 +5,5 @@
     height: 32px;
     border: none;
     outline: none;
-    position: absolute;
-    top: -30px;
-    left: 250px;
+    position: relative;
 }

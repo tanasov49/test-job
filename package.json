@@ -7,7 +7,8 @@
     "build": "webpack --mode production",
     "dev": "concurrently \"npm run server\" \"webpack serve\"",
     "predeploy": "npm run build",
-    "server": "json-server --watch src/users/users.json 3000"
+    "server": "json-server --watch src/users/users.json 3000",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "core-js": "^3.26.1",
     "css-loader": "^6.7.3",
     "cssnano": "^5.1.14",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.2",
